@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #000; */
+    background:url(https://images.indianexpress.com/2023/01/Sunset-sunrise-effect-20230120.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    width: 450px;
+   background: url(https://i.pinimg.com/originals/c8/d6/bc/c8d6bc6ad3b08172bdbc1665f3ed080b.jpg) no-repeat;
+   background-size: cover;
+    background-position: center;
+    height: min-content;   /*jitna content ho utni height le */
+    background-color: #fff;
+    border-radius: 12px;  /*isse thoda courve aajayega div m corner m*/
+    padding: 28px;   /*chaaro trf s 28px de dia internal*/
+  
+}
+
+.search-box{
+    width: 100%;  
+    height: min-content;
+    display: flex;
+    justify-content: space-between;  /*isse  jo search wala magnifying glass h vo right m hojayega*/
+    align-items: center;
+}
+
+.search-box input{
+    width: 84%;
+    font-size: 20px;
+    text-transform: capitalize;  /*isse hr word ka 1st letter capital hojayega*/
+    color: #000;
+    background-color: #f8f0f0;
+    padding: 12px 16px;
+    border-radius: 14px;
+}
+
+.search-box input::placeholder{
+    color: #000;
+}
+
+.search-box button{
+    width: 46px;
+    height: 46px;
+    background-color: #f3eded;
+    border-radius: 50%;  /*circle bn jayega mgnifying glass*/
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.search-box button:hover{   /*mtlb hum chahte h jb bhi koi btn p cursor le jaye  toh uska color change ho*/
+    color: #000000;
+    background-color: #c5c5c5;
+}
+
+.weather-body{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-block: 20px;  /*margin block s hmare top or bottom dono m 20 px ka mrgin ajayega*/
+    display: none;
+}
+.weather-body img{
+    width: 60%;  /*img ko chota krdia 60%*/
+}
+
+.weather-box{
+    margin-block: 20px;
+    text-align: center;
+}
+
+.weather-box .temperature{
+    font-size: 40px;
+    font-weight: 800;  /*isse mote mrker s likha ajayega 0 deg celcius*/
+    position: relative;
+    color: #fffffffb;
+}
+
+.weather-box .temperature sup{
+    font-size: 20px;
+    position: absolute;
+    font-weight: 600;
+    color: #fffffffb;
+}
+
+.weather-box .description{
+    font-size: 20px;
+    font-weight: 700;
+    color: #fffffffb;
+    text-transform: capitalize;
+}
+
+.weather-details{
+    width: 100%;
+    display: flex;  /*flex krte hi row m aagyi dono detail humidity or wind speed*/
+    justify-content: space-between;
+    margin-top: 30px;
+    color: #ffffff;
+}
+
+.humidity, .wind{
+    display: flex;
+    align-items: center;
+}
+
+.humidity{
+    margin-left: 20px;
+}
+
+.wind{
+    margin-right: 20px;
+}
+
+.weather-details i{
+    font-size: 36px;
+}
+
+.weather-details .text{
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.text span{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.location-not-found{
+    margin-top: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.location-not-found h1{
+    font-size: 20px;
+    color: #6b6b6b;
+    margin-block-end: 15px;
+}
+.location-not-found img{
+    width: 80%;
+}
